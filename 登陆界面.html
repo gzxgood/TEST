@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 在这里可以添加自定义的用户名和密码验证逻辑
+            if (username === "zhouwanyi" && password === "123456") {
+                return true; // 登录成功
+            } else {
+                alert("Invalid username or password");
+                return false; // 登录失败
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="一号病房.html" onsubmit="return validateForm()">
+        <input type="text" placeholder="Username" id="username" required><br>
+        <input type="password" placeholder="Password" id="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
